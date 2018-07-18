@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+
+<body>
+  <ul class="testHarness">
+    <li class="left">
+      <ul>
+        <li id="playerContainer">
+          <div id="cueTrack">
+            <span id="cueText" class="hide"></span>
+          </div>
+          <div id="player" class="defaultPlayer"></div>
+        </li>
+        <li class="log">
+          <div class="logbar">
+            <div class="title">Message Log</div>
+            <button id="clearLogBtn" type="button" class="clear btn">Clear Log</button>
+            <button id="toggleLogBtn" type="button" class="resume btn">Pause Log</button>
+            <button id="logCuePointsBtn" type="button" class="resume btn">Log Cues</button>
+          </div>
+          <div class="messages">
+            <ul id="messageList" class="list">
+              <ul>
+          </div>
+        </li>
+        </ul>
+        <li class="right">
+          <ul class="sections">
+            <li>
+              <h3>Video List<span class="showToggle">-</span></h3>
+              <div class="content video-list">
+                <p id="videoListError" class="hide"></p>
+                <p class="horbar">
+                  <label for="videoId">videoId:</label>
+                  <input id="videoId" name="videoId" class="videoId" type="text" />
+                  <button type="button" class="addVideo" id="addVideo">add</button>
+                </p>
+                <label for="videos" class="videos-label">video list:</label>
+                <select id="videos" multiple>
+                  </select>
+                <!-- <button type="button" class="deleteVideo" id="deleteVideo">delete Video</button> -->
+              </div>
+            </li>
+            <li>
+              <h3>Cue Points<span class="showToggle">-</span></h3>
+              <div class="content cue-points">
+                <p id="cuePointError" class="hide"></p>
+                <label for="cuePoint" class="cue-label">cuePoint:</label>
+                <textarea id="cuePoint" name="cuePoint" class="cuePoint"></textarea>
+                <p class="horbar">
+                  <label for="timestamp">timestamp:</label>
+                  <input id="timestamp" name="timestamp" class="timestamp" type="text" />
+                  <button type="button" class="addCuePoint" id="addCuePoint">add</button>
+                </p>
+                <label for="cuePoints" class="cue-label">cuePoint list:</label>
+                <select id="cuePoints" multiple>
+                </select>
+                <button type="button" class="deleteCuePoint" id="deleteCuePoint">delete cuePoint</button>
+              </div>
+            </li>
+            <li>
+              <h3>Properties<span class="showToggle">+</span></h3>
+              <div class="content not-visible">not implemented.</div>
+            </li>
+          </ul>
+        </li>
+    </li>
+    </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script src="./js/api.js"></script>
+</body>
+
+</html>
