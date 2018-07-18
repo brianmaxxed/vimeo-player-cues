@@ -30,7 +30,7 @@ Hit play to play the video and the cuePoints will show in white color over a bla
 I just set a timeout to 5 seconds to display the text for a while and then hide via a display none for the cueText div. Ideally, you would want to allow either a duration on the cuePoint itself or control the duration via a hook into the currentTime of the player. Normally you have one timer on a player and within that timer call a method to check if the cuePoint is supposed to show at a given second and then when the time to show it has elapsed at another point in the currentTime of the video then the cuePoint will automatically hide. I can speak on player timing and other topics as needed.
 
 
-### Notes: Normally, a text track would be built somewhere within the player structure itself where one would layer the overlay above the video, but behind the controls. I did explore in the player code base and API if that was possible via some call or manipulation of the DOM, but the player doesn't have such facility built-in. Therefore, I create an overlay on top of the player where the text is placed on a div above the control bar and away from other menus. It is, after all an exercise, but I did want to note that.
+#### Notes: Normally, a text track would be built somewhere within the player structure itself where one would layer the overlay above the video, but behind the controls. I did explore in the player code base and API if that was possible via some call or manipulation of the DOM, but the player doesn't have such facility built-in. Therefore, I create an overlay on top of the player where the text is placed on a div above the control bar and away from other menus. It is, after all an exercise, but I did want to note that.
 
 ##########################
 
