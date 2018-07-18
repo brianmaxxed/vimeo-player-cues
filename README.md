@@ -9,7 +9,7 @@ On the right of the video player are a couple of sections for the video list and
 I use localStorage to persist an internal state of the player. The library is within a closure and there are several interal variables, namely state, defaults and cached DOM elements
 When the page is refreshed, the local storage is checked for a 'video' key that would contain all the videos and each video's cuePoints. That is loaded if it exists upon page load.
 
-## Video list
+### Video list
 If a video Id is invalid, doesn't exist or has some other privacy condition, authentication required, or other response from the Vimeo API then the video will NOT be added to the list, but the default player loading of the contigency does work. Try it out with other video ids which may not return an HTTP status code of 200.
 
 If a valid id successfully loads a video then it is added to the video list.
